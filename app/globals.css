@@ -4,7 +4,53 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  color: black;
+  --font-sans:
+    "Pretendard", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+
+  /* Typography */
+  /* Heading (24 / 30) */
+  --type-heading-b: 700 1.5rem/1.875rem var(--font-sans);
+  --type-heading-s: 600 1.5rem/1.875rem var(--font-sans);
+  --type-heading-m: 500 1.5rem/1.875rem var(--font-sans);
+  --type-heading-r: 400 1.5rem/1.875rem var(--font-sans);
+
+  /* Title (20 / 24) */
+  --type-title-b: 700 1.25rem/1.5rem var(--font-sans);
+  --type-title-s: 600 1.25rem/1.5rem var(--font-sans);
+  --type-title-m: 500 1.25rem/1.5rem var(--font-sans);
+  --type-title-r: 400 1.25rem/1.5rem var(--font-sans);
+
+  /* Sub Title (18 / 22) */
+  --type-sub-title-b: 700 1.125rem/1.375rem var(--font-sans);
+  --type-sub-title-s: 600 1.125rem/1.375rem var(--font-sans);
+  --type-sub-title-m: 500 1.125rem/1.375rem var(--font-sans);
+  --type-sub-title-r: 400 1.125rem/1.375rem var(--font-sans);
+
+  /* Body (16 / 20) */
+  --type-body-b: 700 1rem/1.25rem var(--font-sans);
+  --type-body-s: 600 1rem/1.25rem var(--font-sans);
+  --type-body-m: 500 1rem/1.25rem var(--font-sans);
+  --type-body-r: 400 1rem/1.25rem var(--font-sans);
+
+  /* Body Small (14 / 18) */
+  --type-body-small-b: 700 0.875rem/1.125rem var(--font-sans);
+  --type-body-small-s: 600 0.875rem/1.125rem var(--font-sans);
+  --type-body-small-m: 500 0.875rem/1.125rem var(--font-sans);
+  --type-body-small-r: 400 0.875rem/1.125rem var(--font-sans);
+
+  /* Caption (12 / 16) */
+  --type-caption-b: 700 0.75rem/1rem var(--font-sans);
+  --type-caption-s: 600 0.75rem/1rem var(--font-sans);
+  --type-caption-m: 500 0.75rem/1rem var(--font-sans);
+  --type-caption-r: 400 0.75rem/1rem var(--font-sans);
+
+  /* Label (10 / 12) */
+  --type-label-b: 700 0.625rem/0.75rem var(--font-sans);
+  --type-label-s: 600 0.625rem/0.75rem var(--font-sans);
+  --type-label-m: 500 0.625rem/0.75rem var(--font-sans);
+  --type-label-r: 400 0.625rem/0.75rem var(--font-sans);
+
   --foreground: oklch(0.145 0 0);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -65,6 +111,9 @@
   --breakpoint-tablet: 40rem;
   --breakpoint-laptop: 64rem;
   --breakpoint-desktop: 120rem;
+
+  --font-weight-*: initial;
+
   --color-info: var(--info);
   --color-info-light: var(--info-light);
   --color-negative: var(--negative);
@@ -175,5 +224,105 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Heading */
+  .heading-b700 {
+    font: var(--type-heading-b);
+  }
+  .heading-s600 {
+    font: var(--type-heading-s);
+  }
+  .heading-m500 {
+    font: var(--type-heading-m);
+  }
+  .heading-r400 {
+    font: var(--type-heading-r);
+  }
+
+  /* Title */
+  .title-b700 {
+    font: var(--type-title-b);
+  }
+  .title-s600 {
+    font: var(--type-title-s);
+  }
+  .title-m500 {
+    font: var(--type-title-m);
+  }
+  .title-r400 {
+    font: var(--type-title-r);
+  }
+
+  /* Sub Title */
+  .sub-title-b700 {
+    font: var(--type-title-b);
+  }
+  .sub-title-s600 {
+    font: var(--type-title-s);
+  }
+  .sub-title-m500 {
+    font: var(--type-title-m);
+  }
+  .sub-title-r400 {
+    font: var(--type-title-r);
+  }
+
+  /* Body */
+  .body-b700 {
+    font: var(--type-body-b);
+  }
+  .body-s600 {
+    font: var(--type-body-s);
+  }
+  .body-m500 {
+    font: var(--type-body-m);
+  }
+  .body-r400 {
+    font: var(--type-body-r);
+  }
+
+  /* Body */
+  .body-small-b700 {
+    font: var(--type-body-small-b);
+  }
+  .body-small-s600 {
+    font: var(--type-body-small-s);
+  }
+  .body-small-m500 {
+    font: var(--type-body-small-m);
+  }
+  .body-small-r400 {
+    font: var(--type-body-small-r);
+  }
+
+  /* Caption */
+  .caption-b700 {
+    font: var(--type-caption-b);
+  }
+  .caption-s600 {
+    font: var(--type-caption-s);
+  }
+  .caption-m500 {
+    font: var(--type-caption-m);
+  }
+  .caption-r400 {
+    font: var(--type-caption-r);
+  }
+
+  /* Label */
+  .label-b700 {
+    font: var(--type-label-b);
+  }
+  .label-s600 {
+    font: var(--type-label-s);
+  }
+  .label-m500 {
+    font: var(--type-label-m);
+  }
+  .label-r400 {
+    font: var(--type-label-r);
   }
 }
