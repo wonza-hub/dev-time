@@ -1,21 +1,18 @@
 {
-    "permissions": {
-      "allow": [
-        "Edit(.commit_message.txt)"
-      ]
-    },
-    "hooks": {
-      "Stop": [
-        {
-          "matcher": "Edit|MultiEdit|Write",
-          "hooks": [
-            {
-              "type": "command",
-              "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"$p = Join-Path $env:CLAUDE_PROJECT_DIR '.claude/hooks/auto-commit.ps1'; & $p\""  // Windows
-            }
-          ]
-        }
-      ]
-    }
+  "permissions": {
+    "allow": ["Edit(.commit_message.txt)"]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"$p = Join-Path $env:CLAUDE_PROJECT_DIR '.claude/hooks/auto-commit.ps1'; & $p\""
+          }
+        ]
+      }
+    ]
   }
-  
+}
