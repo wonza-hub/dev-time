@@ -1,0 +1,97 @@
+/* Heading */
+@utility heading-b700 {
+  font: var(--type-heading-b);
+}
+@utility heading-s600 {
+  font: var(--type-heading-s);
+}
+@utility heading-m500 {
+  font: var(--type-heading-m);
+}
+@utility heading-r400 {
+  font: var(--type-heading-r);
+}
+
+/* Title */
+@utility title-b700 {
+  font: var(--type-title-b);
+}
+@utility title-s600 {
+  font: var(--type-title-s);
+}
+@utility title-m500 {
+  font: var(--type-title-m);
+}
+@utility title-r400 {
+  font: var(--type-title-r);
+}
+
+/* Sub Title */
+@utility sub-title-b700 {
+  font: var(--type-sub-title-b);
+}
+@utility sub-title-s600 {
+  font: var(--type-sub-title-s);
+}
+@utility sub-title-m500 {
+  font: var(--type-sub-title-m);
+}
+@utility sub-title-r400 {
+  font: var(--type-sub-title-r);
+}
+
+/* Body */
+@utility body-b700 {
+  font: var(--type-body-b);
+}
+@utility body-s600 {
+  font: var(--type-body-s);
+}
+@utility body-m500 {
+  font: var(--type-body-m);
+}
+@utility body-r400 {
+  font: var(--type-body-r);
+}
+
+/* Body Small */
+@utility body-small-b700 {
+  font: var(--type-body-small-b);
+}
+@utility body-small-s600 {
+  font: var(--type-body-small-s);
+}
+@utility body-small-m500 {
+  font: var(--type-body-small-m);
+}
+@utility body-small-r400 {
+  font: var(--type-body-small-r);
+}
+
+/* Caption */
+@utility caption-b700 {
+  font: var(--type-caption-b);
+}
+@utility caption-s600 {
+  font: var(--type-caption-s);
+}
+@utility caption-m500 {
+  font: var(--type-caption-m);
+}
+@utility caption-r400 {
+  font: var(--type-caption-r);
+}
+
+/* Label */
+@utility label-b700 {
+  font: var(--type-label-b);
+}
+@utility label-s600 {
+  font: var(--type-label-s);
+}
+@utility label-m500 {
+  font: var(--type-label-m);
+}
+@utility label-r400 {
+  font: var(--type-label-r);
+}
