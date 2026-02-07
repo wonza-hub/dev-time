@@ -1,12 +1,12 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
   --font-sans:
-    "Pretendard", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    'Pretendard', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 
   /* Typography */
   /* Heading (24 / 30) */
@@ -218,8 +218,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-
-@import "../src/shared/styles/typography.css";
+@import '../src/shared/styles/typography.css';
 
 @layer base {
   * {
@@ -227,5 +226,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .link {
+    @apply hover:body-b700 hover:text-secondary text-secondary transition-colors hover:underline;
   }
 }
