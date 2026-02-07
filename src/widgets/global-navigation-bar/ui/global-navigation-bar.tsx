@@ -22,15 +22,15 @@ export default function GlobalNavigationBar({
   isLoggedIn = false,
 }: GlobalNavigationBarProps) {
   return (
-    <nav className="bg-background sticky top-0 z-50 w-full border-b">
+    <nav className="bg-primary-light sticky top-0 z-50 w-full">
       <div className="body-s600 mx-auto flex h-14 max-w-7xl items-center justify-between px-4">
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-12">
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/images/brand-logo-horizontal.svg"
               alt="logo"
-              width={100}
-              height={100}
+              width={148}
+              height={40}
             />
           </Link>
           <div className="tablet:flex tablet:items-center tablet:gap-6 hidden">
@@ -53,12 +53,12 @@ export default function GlobalNavigationBar({
           </SheetTrigger>
           <SheetContent side="right" className="text-secondary w-[280px]">
             <SheetHeader>
-              <SheetTitle className="hidden">모바일 네비게이션 바</SheetTitle>
+              <SheetTitle className="sr-only">모바일 네비게이션 바</SheetTitle>
               <Image
                 src="/images/brand-logo-vertical.svg"
                 alt="logo"
                 width={70}
-                height={70}
+                height={53}
                 className="mx-auto"
               />
             </SheetHeader>
