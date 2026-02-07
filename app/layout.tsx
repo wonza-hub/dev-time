@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { pretendard } from '@/application/font/custom-font';
+import { pretendard } from '@/shared/config/fonts/custom-font';
 import GlobalNavigationBar from '@/widgets/global-navigation-bar';
 
 export const metadata: Metadata = {
