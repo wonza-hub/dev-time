@@ -218,111 +218,14 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+
+@import "../src/shared/styles/typography.css";
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  /* Heading */
-  .heading-b700 {
-    font: var(--type-heading-b);
-  }
-  .heading-s600 {
-    font: var(--type-heading-s);
-  }
-  .heading-m500 {
-    font: var(--type-heading-m);
-  }
-  .heading-r400 {
-    font: var(--type-heading-r);
-  }
-
-  /* Title */
-  .title-b700 {
-    font: var(--type-title-b);
-  }
-  .title-s600 {
-    font: var(--type-title-s);
-  }
-  .title-m500 {
-    font: var(--type-title-m);
-  }
-  .title-r400 {
-    font: var(--type-title-r);
-  }
-
-  /* Sub Title */
-  .sub-title-b700 {
-    font: var(--type-title-b);
-  }
-  .sub-title-s600 {
-    font: var(--type-title-s);
-  }
-  .sub-title-m500 {
-    font: var(--type-title-m);
-  }
-  .sub-title-r400 {
-    font: var(--type-title-r);
-  }
-
-  /* Body */
-  .body-b700 {
-    font: var(--type-body-b);
-  }
-  .body-s600 {
-    font: var(--type-body-s);
-  }
-  .body-m500 {
-    font: var(--type-body-m);
-  }
-  .body-r400 {
-    font: var(--type-body-r);
-  }
-
-  /* Body */
-  .body-small-b700 {
-    font: var(--type-body-small-b);
-  }
-  .body-small-s600 {
-    font: var(--type-body-small-s);
-  }
-  .body-small-m500 {
-    font: var(--type-body-small-m);
-  }
-  .body-small-r400 {
-    font: var(--type-body-small-r);
-  }
-
-  /* Caption */
-  .caption-b700 {
-    font: var(--type-caption-b);
-  }
-  .caption-s600 {
-    font: var(--type-caption-s);
-  }
-  .caption-m500 {
-    font: var(--type-caption-m);
-  }
-  .caption-r400 {
-    font: var(--type-caption-r);
-  }
-
-  /* Label */
-  .label-b700 {
-    font: var(--type-label-b);
-  }
-  .label-s600 {
-    font: var(--type-label-s);
-  }
-  .label-m500 {
-    font: var(--type-label-m);
-  }
-  .label-r400 {
-    font: var(--type-label-r);
   }
 }
