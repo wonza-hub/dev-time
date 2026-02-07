@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { pretendard } from '@/shared/config/fonts/custom-font';
+import GlobalNavigationBar from '@/widgets/global-navigation-bar';
 
 export const metadata: Metadata = {
   title: 'DevTime',
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${pretendard.className}`}>{children}</body>
+      <body className={pretendard.className}>
+        <GlobalNavigationBar />
+        {children}
+      </body>
     </html>
   );
 }
