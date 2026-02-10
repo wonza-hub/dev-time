@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { pretendard } from '@/shared/config/fonts/custom-font';
-import GlobalNavigationBar from '@/widgets/global-navigation-bar';
+import { GlobalNavigationBar } from '@/widgets/global-navigation-bar';
+import { ModalProvider } from '@/applications/provider';
 
 export const metadata: Metadata = {
   title: 'DevTime',
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className={pretendard.className}>
         <GlobalNavigationBar />
-        {children}
+        <ModalProvider>{children}</ModalProvider>
       </body>
     </html>
   );
