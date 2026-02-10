@@ -11,6 +11,7 @@ import {
   AlertDialogAction,
 } from '@/shared/ui/alert-dialog';
 import { useAlertModal } from '../model/alert-modal-store';
+import { cn } from '@/shared/lib/utils';
 
 export default function AlertModal() {
   const store = useAlertModal();
@@ -41,10 +42,21 @@ export default function AlertModal() {
 
   return (
     <AlertDialog open={store.isOpen}>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>{title}</AlertDialogTitle>
-          <AlertDialogDescription>{body}</AlertDialogDescription>
+      <AlertDialogContent className="sm:max-w-82 sm:gap-6 sm:p-6">
+        <AlertDialogHeader className="sm:gap-2">
+          <AlertDialogTitle
+            className={cn(
+              body ? 'title-s600' : 'sub-title-m500',
+              'text-gray-800',
+            )}
+          >
+            {title}
+          </AlertDialogTitle>
+          {body && (
+            <AlertDialogDescription className="body-m500 text-gray-600">
+              {body}
+            </AlertDialogDescription>
+          )}
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel onClick={handleCancelClick}>
