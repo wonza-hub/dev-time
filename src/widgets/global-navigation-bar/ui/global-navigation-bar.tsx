@@ -33,19 +33,19 @@ export default function GlobalNavigationBar({
               height={40}
             />
           </Link>
-          <div className="tablet:flex tablet:items-center tablet:gap-6 hidden">
+          <div className="hidden sm:flex sm:items-center sm:gap-6">
             <NavigationBarMenu />
           </div>
         </div>
 
         {/* Desktop Navigation - tablet 이상에서만 표시 */}
-        <div className="tablet:flex tablet:items-center tablet:gap-6 hidden">
+        <div className="hidden sm:flex sm:items-center sm:gap-6">
           <NavigationBarLogin isLoggedIn={isLoggedIn} />
         </div>
 
         {/* Mobile Navigation - tablet 미만에서만 표시 */}
         <Sheet>
-          <SheetTrigger asChild className="tablet:hidden">
+          <SheetTrigger asChild className="sm:hidden">
             <Button variant="ghost" size="icon">
               <Menu className="text-secondary size-5" />
               <span className="sr-only">메뉴 열기</span>
