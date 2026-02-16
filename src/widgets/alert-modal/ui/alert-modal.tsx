@@ -16,8 +16,8 @@ interface AlertModalProps {
   body?: string;
   cancelText?: string;
   actionText?: string;
-  onCancel?: () => void;
-  onAction?: () => void;
+  onCancel?: () => void | Promise<void>;
+  onAction?: () => void | Promise<void>;
 }
 export default function AlertModal({
   title,
@@ -28,28 +28,26 @@ export default function AlertModal({
   onAction,
 }: AlertModalProps) {
   return (
-    <>
-      <AlertDialogContent className="sm:max-w-82 sm:gap-6 sm:p-6">
-        <AlertDialogHeader className="sm:gap-2">
-          <AlertDialogTitle
-            className={cn(
-              body ? 'title-s600' : 'sub-title-m500',
-              'text-gray-800',
-            )}
-          >
-            {title}
-          </AlertDialogTitle>
-          {body && (
-            <AlertDialogDescription className="body-m500 text-gray-600">
-              {body}
-            </AlertDialogDescription>
+    <AlertDialogContent className="sm:max-w-82 sm:gap-6 sm:p-6">
+      <AlertDialogHeader className="sm:gap-2">
+        <AlertDialogTitle
+          className={cn(
+            body ? 'title-s600' : 'sub-title-m500',
+            'text-gray-800',
           )}
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel onClick={onCancel}>{cancelText}</AlertDialogCancel>
-          <AlertDialogAction onClick={onAction}>{actionText}</AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </>
+        >
+          {title}
+        </AlertDialogTitle>
+        {body && (
+          <AlertDialogDescription className="body-m500 text-gray-600">
+            {body}
+          </AlertDialogDescription>
+        )}
+      </AlertDialogHeader>
+      <AlertDialogFooter>
+        <AlertDialogCancel onClick={onCancel}>{cancelText}</AlertDialogCancel>
+        <AlertDialogAction onClick={onAction}>{actionText}</AlertDialogAction>
+      </AlertDialogFooter>
+    </AlertDialogContent>
   );
 }
