@@ -1,6 +1,9 @@
 import { create } from 'zustand';
 import { combine, devtools } from 'zustand/middleware';
 
+/**
+ * @deprecated shadcn alertdialog trigger 사용
+ */
 type OpenState = {
   isOpen: true;
   title: string;
