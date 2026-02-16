@@ -5,21 +5,21 @@ import { Slot } from 'radix-ui';
 import { cn } from '@/shared/lib/utils';
 
 const buttonVariants = cva(
-  "min-w-[88px] min-h-[48px] sub-title-s600 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 focus-visible:outline-1.5 focus-visible:outline-offset-0 focus-visible:outline-focused",
+  "hover:inset-shadow-full inset-shadow-black/10 min-w-[88px] min-h-[48px] sub-title-s600 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 focus-visible:outline-1.5 focus-visible:outline-offset-0 focus-visible:outline-focused",
   {
     variants: {
       variant: {
         default:
-          'bg-primary text-primary-foreground hover:shadow-[inset_0_0_0_100vmax_rgba(0,0,0,0.1)] disabled:bg-gray-400 disabled:text-gray-300',
+          'bg-primary text-primary-foreground disabled:bg-gray-400 disabled:text-gray-300',
         destructive:
-          'bg-destructive text-white hover:shadow-[inset_0_0_0_100vmax_rgba(0,0,0,0.1)] focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
+          'bg-destructive text-white focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
         outline:
-          'border bg-background shadow-xs hover:shadow-[inset_0_0_0_100vmax_rgba(0,0,0,0.1)] dark:bg-input/30 dark:border-input',
+          'border bg-background shadow-xs dark:bg-input/30 dark:border-input',
         secondary:
-          'bg-primary-light text-primary hover:shadow-[inset_0_0_0_100vmax_rgba(0,0,0,0.1)] disabled:bg-gray-300 disabled:text-gray-400',
+          'bg-primary-light text-primary disabled:bg-gray-300 disabled:text-gray-400',
         tertiary:
-          'bg-gray-50 text-primary hover:shadow-[inset_0_0_0_100vmax_rgba(0,0,0,0.1)] disabled:bg-gray-300 disabled:text-gray-400',
-        ghost: 'hover:shadow-[inset_0_0_0_100vmax_rgba(0,0,0,0.1)]',
+          'bg-gray-50 text-primary disabled:bg-gray-300 disabled:text-gray-400',
+        ghost: '',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
