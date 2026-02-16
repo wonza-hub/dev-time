@@ -107,11 +107,6 @@
 }
 
 @theme inline {
-  --breakpoint-*: initial;
-  --breakpoint-tablet: 40rem;
-  --breakpoint-laptop: 64rem;
-  --breakpoint-desktop: 120rem;
-
   --font-weight-*: initial;
 
   --color-info: var(--info);

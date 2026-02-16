@@ -1,1 +1,1 @@
-export { default } from './ui/global-navigation-bar';
+export { default as GlobalNavigationBar } from './ui/global-navigation-bar';
