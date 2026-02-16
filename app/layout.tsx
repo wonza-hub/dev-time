@@ -3,6 +3,7 @@ import './globals.css';
 import { pretendard } from '@/shared/config/fonts/custom-font';
 import { GlobalNavigationBar } from '@/widgets/global-navigation-bar';
 import { ModalProvider } from '@/applications/provider';
+import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
   title: 'DevTime',
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={pretendard.className}>
         <GlobalNavigationBar />
         <ModalProvider>{children}</ModalProvider>
+        <Toaster />
       </body>
     </html>
   );
