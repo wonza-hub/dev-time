@@ -1,14 +1,9 @@
-import { AlertModal } from '@/widgets/alert-modal';
+import { AlertDialog } from '@/shared/ui/alert-dialog';
 
 export default function ModalProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      {children}
-      <AlertModal />
-    </>
-  );
+  return <AlertDialog>{children}</AlertDialog>;
 }

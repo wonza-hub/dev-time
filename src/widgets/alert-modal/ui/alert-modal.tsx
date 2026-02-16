@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  AlertDialog,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogHeader,
@@ -10,38 +9,26 @@ import {
   AlertDialogFooter,
   AlertDialogAction,
 } from '@/shared/ui/alert-dialog';
-import { useAlertModal } from '../model/alert-modal-store';
 import { cn } from '@/shared/lib/utils';
 
-export default function AlertModal() {
-  const store = useAlertModal();
-
-  if (!store.isOpen) return null;
-
-  const {
-    title,
-    body,
-    onPositive,
-    onNegative,
-    actions: { close },
-  } = store;
-
-  const handleCancelClick = () => {
-    if (onNegative) {
-      onNegative();
-    }
-    close();
-  };
-
-  const handleActionClick = () => {
-    if (onPositive) {
-      onPositive();
-    }
-    close();
-  };
-
+interface AlertModalProps {
+  title: string;
+  body?: string;
+  cancelText?: string;
+  actionText?: string;
+  onCancel?: () => void;
+  onAction?: () => void;
+}
+export default function AlertModal({
+  title,
+  body,
+  cancelText = '취소',
+  actionText = '확인',
+  onCancel,
+  onAction,
+}: AlertModalProps) {
   return (
-    <AlertDialog open={store.isOpen}>
+    <>
       <AlertDialogContent className="sm:max-w-82 sm:gap-6 sm:p-6">
         <AlertDialogHeader className="sm:gap-2">
           <AlertDialogTitle
@@ -59,14 +46,10 @@ export default function AlertModal() {
           )}
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel onClick={handleCancelClick}>
-            취소
-          </AlertDialogCancel>
-          <AlertDialogAction onClick={handleActionClick}>
-            확인
-          </AlertDialogAction>
+          <AlertDialogCancel onClick={onCancel}>{cancelText}</AlertDialogCancel>
+          <AlertDialogAction onClick={onAction}>{actionText}</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
-    </AlertDialog>
+    </>
   );
 }
