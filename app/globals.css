@@ -91,6 +91,7 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+  --focused: oklch(0.729 0.286 328.03);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -154,6 +155,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-focused: var(--focused);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -170,6 +172,7 @@
   --color-gray-600: oklch(0.446 0.026 256.8);
   --color-gray-700: oklch(0.378 0.03 261.89);
   --color-gray-800: oklch(0.278 0.03 256.85);
+  --inset-shadow-full: inset 0 0 100vmax rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
