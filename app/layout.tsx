@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { pretendard } from '@/shared/config/fonts/custom-font';
 import { GlobalNavigationBar } from '@/widgets/global-navigation-bar';
-import { ModalProvider } from '@/applications/provider';
 import { Toaster } from 'sonner';
+import { ModalProvider } from '@/applications/provider';
+import { TooltipProvider } from '@/shared/ui/tooltip';
 
 export const metadata: Metadata = {
   title: 'DevTime',
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="ko">
       <body className={pretendard.className}>
         <GlobalNavigationBar />
-        <ModalProvider>{children}</ModalProvider>
+        <TooltipProvider>
+          <ModalProvider>{children}</ModalProvider>
+        </TooltipProvider>
         <Toaster />
       </body>
     </html>
