@@ -2,14 +2,14 @@
 
 import { Button } from '@/shared/ui';
 import { AlertDialogTrigger } from '@/shared/ui/alert-dialog';
+import { Checkbox } from '@/shared/ui/checkbox';
 import AlertModal from '@/widgets/alert-modal/ui/alert-modal';
 import { toast } from 'sonner';
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 text-3xl font-medium dark:bg-black">
-      프리텐다드
-      <AlertDialogTrigger asChild>
+      {/* <AlertDialogTrigger asChild>
         <Button variant="outline">얼럿 모달 테스트</Button>
       </AlertDialogTrigger>
       <AlertModal
@@ -21,7 +21,8 @@ export default function Home() {
         onAction={() => {
           toast.success('확인');
         }}
-      />
+      /> */}
+      <Checkbox />
     </div>
   );
 }
