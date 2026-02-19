@@ -45,11 +45,11 @@
   --type-caption-m: 500 0.75rem/1rem var(--font-sans);
   --type-caption-r: 400 0.75rem/1rem var(--font-sans);
 
-  /* Label (10 / 12) */
-  --type-label-b: 700 0.625rem/0.75rem var(--font-sans);
-  --type-label-s: 600 0.625rem/0.75rem var(--font-sans);
-  --type-label-m: 500 0.625rem/0.75rem var(--font-sans);
-  --type-label-r: 400 0.625rem/0.75rem var(--font-sans);
+  /* Label (14 / 18) */
+  --type-label-b: 700 0.875rem/1.125rem var(--font-sans);
+  --type-label-s: 600 0.875rem/1.125rem var(--font-sans);
+  --type-label-m: 500 0.875rem/1.125rem var(--font-sans);
+  --type-label-r: 400 0.875rem/1.125rem var(--font-sans);
 
   --foreground: oklch(0.145 0 0);
   --radius: 0.625rem;
