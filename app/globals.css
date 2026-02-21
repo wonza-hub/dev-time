@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import '../src/shared/styles/typography.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -215,8 +216,6 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
-@import '../src/shared/styles/typography.css';
 
 @layer base {
   * {
