@@ -2,6 +2,7 @@ import type { Preview } from '@storybook/nextjs-vite';
 import '../app/globals.css';
 import { TooltipProvider } from '@/shared/ui/tooltip';
 import { ModalProvider } from '@/applications/provider';
+import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 
 const preview: Preview = {
   parameters: {
@@ -18,6 +19,13 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: 'todo',
     },
+
+    viewport: {
+      options: INITIAL_VIEWPORTS,
+    },
+  },
+  initialGlobals: {
+    viewport: { value: 'ipad', isRotated: false },
   },
   decorators: [
     Story => (
