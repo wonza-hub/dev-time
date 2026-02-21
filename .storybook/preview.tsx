@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/nextjs-vite';
 import '../app/globals.css';
+import { TooltipProvider } from '@/shared/ui/tooltip';
+import { ModalProvider } from '@/applications/provider';
 
 const preview: Preview = {
   parameters: {
@@ -17,6 +19,15 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+  decorators: [
+    Story => (
+      <ModalProvider>
+        <TooltipProvider>
+          <Story />
+        </TooltipProvider>
+      </ModalProvider>
+    ),
+  ],
 };
 
 export default preview;
